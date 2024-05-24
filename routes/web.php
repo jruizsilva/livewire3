@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\CreatePost;
+use App\Livewire\Formulario;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,4 +16,10 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    // Route::get('/dashboard', CreatePost::class)->name('dashboard');
+
+    // Route::get('/dashboard', Formulario::class)->name('dashboard')->lazy(enabled: true);
 });
+
+Route::view('/prueba', 'prueba')->name('prueba');
